@@ -41,6 +41,14 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+.menu {
+  display: none;
+}
+
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -110,6 +118,10 @@ a {
   color: #12183a !important;
 }
 
+.submenu li a:hover {
+  color: #f68b20 !important;
+}
+
 .has-submenu:hover i {
   color: #f68b20;
 }
@@ -125,6 +137,11 @@ a {
   display: flex;
   gap: 50px;
   color: #fff;
+}
+
+.header .contact {
+  display: flex;
+  align-items: center;
 }
 
 .header .contact div {
@@ -143,7 +160,7 @@ a {
   font-weight: 400;
   font-size: 20px;
   border: 1px solid #f68b20;
-  padding: 15px 20px;
+  padding: 10px 30px;
   border-radius: 10px;
 
   transition: all 0.3s ease;
@@ -153,6 +170,58 @@ a {
   background-color: #f68b20;
   color: #fff;
 }
+
+.hero {
+  padding-top: 100px;
+}
+
+.hero .top {
+  display: flex;
+  align-items: center;
+}
+
+.hero .top h1 {
+  max-width: 75%;
+  font-size: 70px;
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.hero .top p {
+  color: #f8db75;
+  font-size: 24px;
+  line-height: 1.5;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 5px;
+}
+
+.hero .bottom {
+  display: grid;
+  grid-template-columns: 3fr 1.5fr 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero .bottom img {
+  border-radius: 15px;
+}
+
+.hero .bottom div p {
+  font-size: 22px;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.hero .bottom div a {
+  background-color: #f68b20;
+  color: #12183a;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Responsive */
 
 @media screen and (max-width: 1440px) {
   .container {
@@ -166,4 +235,36 @@ a {
 
 @media screen and (max-width: 1100px) {
   /* todo */
+
+  .header {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    padding: 30px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .contact > div {
+    display: none;
+    visibility: hidden;
+  }
+
+  .contact a {
+    display: none;
+  }
 }
